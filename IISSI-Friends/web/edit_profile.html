@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <link rel=" stylesheet " href="css/style.css">
+    <script src="js/utils/include.js"> </script>
+    <script src="js/edit_profile.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/header.js" type="module"></script>
+    <title>Edit Profile</title>
+</head>
+<body class="color-fondo">
+    <div id="page-header"></div>
+    <div class="container">
+        <div id="errors"></div>
+        <form id="form-profile-edit">
+            <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="firstname-input">Nombre:</label>
+                            <input type="text" class="form-control form-control-lg text-light bg-dark" id="firstname-input"
+                                name="username" placeholder="Name that users will see">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!--añadir comentario cuando pase el raton sobre la importancia del email invariable-->
+                            <label for="email-input">E-mail:</label>
+                            <input type="email" class="form-control form-control-lg text-light bg-dark" id="email-input"
+                                name="email" placeholder="e-mail" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="password-input">Contraseña:</label>
+                            <input type="password" class="form-control form-control-lg text-light bg-dark"
+                                id="password-input" name="password" placeholder="Contraseña" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="password2-input">Repetir Contraseña:</label>
+                            <input type="password" class="form-control form-control-lg text-light bg-dark"
+                                id="password2-input" name="password2" placeholder="Repetir contraseña" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="birthdate-input">Fecha de nacimiento:</label>
+                            <input type="date" class="form-control form-control-lg text-light bg-dark" id="birthdate-input"
+                                name="dateOfBirth" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-input">Genero:</label>
+                        <select class="form-control" id="gender-input" name="gender">
+                            <option value="1">Hombre</option>
+                            <option value="2">Mujer</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="firstname-input">Estatura en cm:</label>
+                            <input type="number" class="form-control form-control text-light bg-dark" id="height-input"
+                                name="height" placeholder="altura en cm">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="firstname-input">Peso:</label>
+                            <input type="number" class="form-control form-control text-light bg-dark" id="weigth-input"
+                                name="wheight" placeholder="peso en Kg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="select-input">Color de Pelo:</label>
+                        <select class="form-control" id="haircolor-input" name="hairColor">
+                            <option value="1">Negro</option>
+                            <option value="2">Castaño</option>
+                            <option value="3">Rubio</option>
+                            <option value="4">Pelirrojo</option>
+                            <option value="5">Blanco</option>
+                            <option value="6">Gris</option>
+                            <option value="7">Otro</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="select-input">Color de Ojos:</label>
+                        <select class="form-control" id="eyecolor-input" name="eyeColor">
+                            <option value="1">Negro</option>
+                            <option value="2">Marrones</option>
+                            <option value="3">Azules</option>
+                            <option value="4">Verdes</option>
+                            <option value="5">Grises</option>
+                            <option value="6">Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="bio-input">Biografía:</label>
+                            <input type="text" class="form-control text-light bg-dark" id="bio-input" name="bio"
+                                placeholder="Menciones o aspectos interesantes o llamativos de tu vida">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="avatarUrl-input">Avatar:</label>
+                            <input type="text" class="form-control text-light bg-dark" id="avatarUrl-input" name="avatarUrl"
+                                placeholder="Coloque la URL de su foto de perfil">
+                        </div>
+                    </div>
+
+                    
+                <div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="select-input">Aficion 1:</label>
+                            <select class="form-control" id="aficion1-input" name="aficion1">
+                                <option value="1">Videojuegos</option>
+                                <option value="2">Series</option>
+                                <option value="3">Deportes</option>
+                                <option value="4">Leer</option>
+                                <option value="5">Música</option>
+                                <option value="6">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="select-input">Aficion 2:</label>
+                            <select class="form-control" id="aficion2-input" name="aficion2">
+                                <option value="1">Videojuegos</option>
+                                <option value="2">Series</option>
+                                <option value="3">Deportes</option>
+                                <option value="4">Leer</option>
+                                <option value="5">Música</option>
+                                <option value="6">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="select-input">Aficion 3:</label>
+                            <select class="form-control" id="aficion3-input" name="aficion3">
+                                <option value="1">Videojuegos</option>
+                                <option value="2">Series</option>
+                                <option value="3">Deportes</option>
+                                <option value="4">Leer</option>
+                                <option value="5">Música</option>
+                                <option value="6">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="address-input">Direccion:</label>
+                            <input type="text" class="form-control text-light bg-dark" id="address-input" name="address"
+                                placeholder="Dirección donde resides">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="select-input">Provincia:</label>
+                            <select class="form-control" id="select-input" name="provinceId">
+                                <option value="1">Sevilla</option>
+                                <option value="2">Córdoba</option>
+                                <option value="3">Huelva</option>
+                                <option value="4">Cádiz</option>
+                                <option value="5">Madrid</option>
+                                <option value="6">Barcelona</option>
+                                <option value="7">Otra</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="select-input">Municipio:</label>
+                            <select class="form-control" id="select-input" name="municipalityId">
+                                <option value="1">Sevilla</option>
+                                <option value="2">Gines</option>
+                                <option value="3">Aznalcollar</option>
+                                <option value="4">Cabra</option>
+                                <option value="5">Matalascañas</option>
+                                <option value="6">Tarifa</option>
+                                <option value="7">Almonte</option>
+                                <option value="8">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="postcode-input">Código Postal:</label>
+                            <input type="number" class="form-control text-light bg-dark" id="postcode-input"
+                                name="postcodeId" placeholder="Código Postal">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md text-center">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+
+                <br>
+        </form>
+        <br>
+    </div>
+     <script>
+        include("header.html", "#page-header");
+    </script>
+    
+</body>
+</html>

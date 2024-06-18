@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Login page </title>
+    <link rel=" icon " href="/images/logo iissifriends.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/utils/include.js"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="js/login.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/header.js" type="module"></script>
+</head>
+
+<body class="color-fondo">
+    <div class="container">
+        <div id="page-header"> </div>
+        <div id="errors"></div>
+        <h2> Login and have fun: </h2>
+        <form id="login-form">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <!--añadir comentario cuando pase el raton sobre la importancia del email invariable-->
+                            <label for="email">E-mail:</label>
+                            <input type="email" class="form-control form-control-lg text-light bg-dark" id="email-input" name="email"
+                                placeholder="e-mail">
+                    </div>
+                </div> 
+                <div class="col-md-7"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="lastname-input">Contraseña:</label>
+                        <input type="password" class="form-control form-control-lg text-light bg-dark" id="password-input"
+                            name="password" placeholder="Contraseña">
+                    </div>
+                </div>
+            </div>
+            </br>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>

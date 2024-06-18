@@ -1,0 +1,74 @@
+    <!DOCTYPE html>
+<html>
+
+<head>
+    <link rel=" icon " href="/images/logo iissifriends.png">
+    <link rel=" stylesheet " href="/css/style.css ">
+    <script src="/js/utils/include.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="js/header.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/picture_detail.js" type="module"></script>
+
+</head>
+
+<body class="color-fondo">
+    <div id="page-header"></div>
+    <body class="dark"></body>
+
+    <div class="container">
+        <div id="errors"></div>
+        <div class="row text-center">
+            <div class="col-md" id="photo-details-column">
+                
+            </div>
+            
+            <div class="col-md-3" id="actions-col">
+                <br>
+                <div>
+                    <button id = "button-edit" class="btn btn-info">Edit this photo</button>
+                    <button id = "button-delete" class="btn btn-danger">Delete this photo</button>
+                </div>
+                <br>
+                
+            </div>
+        
+            <div class="col-md-3">
+                <form>
+                    <div class="form-group">
+                        <label for="rating-input">Rate this photo:</label>
+                        <select id="rating-input" name="rating" class="form-control">
+                            <option value="1">★</option>
+                            <option value="2">★★</option>
+                            <option value="3">★★★</option>
+                            <option value="4">★★★★</option>
+                            <option value="5">★★★★★</option>
+                        </select>
+                        <br>
+                        <button type="submit" class="btn btn-success">Rate</button>
+                    </div>
+                </form>
+            </div>   
+        </div>
+        </br>
+        
+        <div class="row text-center">
+            <div class="col-md">
+                <a href="index.html" class="btn btn-primary">Return to the gallery</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+
+</body>

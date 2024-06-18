@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta>
+    <title>Perfil de Usuario</title>
+    <link rel=" icon " href="/images/logo iissifriends.png">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="js/perfil.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/header.js" type="module"></script>
+    <script src="/js/utils/include.js"> </script>
+    <link rel="stylesheet" href="edit_profile.html">
+
+</head>
+
+<body class="color-fondo">
+    <hr>
+    <div class="container">
+        <div id="errors"></div>
+        <div class="row text-center">
+            <div class="col-md">
+                <div id="page-header"> </div>
+                <div id="dom-test"></div>
+                <h3>Mis publicaciones</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                            <a type="button" href="edit_profile.html" class="btn btn-back">Editar perfil</a>
+                    </div>
+                    <div class="col-md-3">
+                            <button id = "delete-user" class="btn btn-danger"> Borrar Usuario</button>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="row text-center" id="gallery">
+            
+        </div>
+    </div>
+
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>

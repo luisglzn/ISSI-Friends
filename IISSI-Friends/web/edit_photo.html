@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <link rel=" stylesheet " href="css/style.css">
+    <script src="js/utils/include.js"> </script>
+    <script src="js/edit_photo.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/header.js" type="module"></script>
+
+    <title>Edit Photo</title>
+</head>
+
+<body class="color-fondo">
+    <div id="page-header"></div>
+    <div class="container">
+        <div id="page-title"> Editando la foto</div>
+        <div id="errors"></div>
+        <form id="form-photo-upload">
+            <div class="form-group">
+                <label for="pictureURL">URL:</label>
+                <input required type="text" class="form-control" id="pictureURL" name="pictureURL" placeholder="Photo URL">
+            </div>
+            <div class="form-group">
+                <label for="name">Title:</label>
+                <input required type="text" class="form-control" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="input-description">Description:</label>
+                <textarea class="form-control" id="input-description" name="description"
+                    placeholder="Describe your image..." rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="input-visibility">Visibility:</label>
+                <select required class="form-control" id="input-visibility" name="visibility">
+                    <option value="Public">Public</option>
+                    <option value="Private">Private</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-md text-center">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </form>
+        </br>
+        <div class="row text-center">
+            <div class="col-md">
+                <a href="index.html" class="btn btn-primary">Return to the gallery</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/header.js" type="module"></script>
+    <script src="js/utils/include.js"> </script>
+
+    <title>Más información</title>
+</head>
+<body class="color-fondo">
+    <div class = "container">
+        <div id="page-header"></div>
+
+         <div class="row">
+            <div class="col-md">
+                <h2> * Nivel optado --> Aprobado </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <h2> * Todos los campos del registro son obligatorios excepto el avatar</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <h2> * Si el usuario no pone un avatar se le asignará uno por defecto</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <h2> * El usuario para el profesor tiene el correo admin@gmail.com y la contraseña admin</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <h2> * La gestión de las aficiones del usuario se realiza desde la edición del perfil en la vista Profile</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <h2> * El usuario con email luigonloz@alum.us.es y contraseña luigonloz tiene 5 publicaciones.<section>
+                     Si trata de realizar otra publicacion salta la restricción de fotos por usuarios (Máximo de 5 por usuario).
+                     El código para esa restricción está en edit_photo.js en la función handleSubmitPhoto
+                </section></h2>
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="col-md">
+                <h2> * Cuando un usuario no tiene fotos asociadas se borra el perfil de la BD sin problemas.<section>
+                     Pero cuando tiene fotos asociadas no hemos logrado añadir una fecha de baja en el usuario.
+                     El codigo asociado a esta función está en perfil.js
+                </section></h2>
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+
+</body>
+</html>
